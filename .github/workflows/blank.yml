@@ -36,3 +36,14 @@ jobs:
         run: |  # 通过 | 符号定义多行命令
           echo 添加其他操作来构建、
           echo 测试并部署你的项目。
+      
+      # 第四步:安装g++编译器
+
+      - name: 安装 g++ 编译器
+        run: sudo apt-get install g++
+
+      # 第五步:编译并运行代码
+      - name: 编译并运行代码
+        run: |
+          g++ -o main main.cpp  # 编译 hello.cpp 文件
+          ./main  # 运行编译后的程序
